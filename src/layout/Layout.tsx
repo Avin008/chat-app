@@ -1,14 +1,11 @@
 import Navbar from "./Navbar";
+import { Outlet } from "react-router-dom";
 
-const Layout = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const Layout = () => {
   return (
     <div className="bg-amber-50 h-screen">
       <Navbar />
-      {children}
+      <Outlet />
     </div>
   );
 };
