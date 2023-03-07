@@ -12,7 +12,7 @@ const Root = () => {
         </p>
         <div className="flex gap-3 mt-5">
           <Link
-            className="py-1 px-4 border text-white font-medium bg-[#2F2E41] rounded-md"
+            className="py-1 px-4 border text-white font-medium bg-[#766C7F] rounded-md"
             to="/signup"
           >
             Join Now
