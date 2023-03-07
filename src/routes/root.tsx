@@ -28,6 +28,7 @@ const Root = () => {
       </div>
       <div className="relative rounded">
         <img
+          loading="lazy"
           className="absolute rounded-md h-full w-full object-cover"
           src="https://notation1.vercel.app/notes.svg"
         />
