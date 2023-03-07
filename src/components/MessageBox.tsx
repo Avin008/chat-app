@@ -1,4 +1,11 @@
-const MessageBox = () => {
+import { useState } from "react";
+const MessageBox = ({
+  setMessageFunc,
+}: {
+  setMessageFunc: (message: string) => void;
+}) => {
+  const [message, setMessage] = useState("");
+
   return (
     <div className="border fixed flex items-center bottom-5 right-40 bg-[#FFFFFF] mx-auto border-black w-1/2 h-12">
       <textarea
@@ -6,8 +13,22 @@ const MessageBox = () => {
         name=""
         id=""
         placeholder="Write Your Message Here..."
+        value={message}
+        onChange={(
+          e: React.ChangeEvent<HTMLTextAreaElement>
+        ) => {
+          setMessage(e.target.value);
+        }}
       ></textarea>
-      <button className="font-medium">SEND</button>
+      <button
+        className="font-medium"
+        onClick={() => {
+          setMessageFunc(message);
+          setMessage("");
+        }}
+      >
+        SEND
+      </button>
     </div>
   );
 };
