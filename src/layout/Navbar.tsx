@@ -15,10 +15,10 @@ const Navbar = () => {
       </div>
 
       <ul className="flex gap-5 items-center font-medium">
-        <li>
+        <li className="border border-gray-400 py-1 px-4 rounded-md">
           <Link to="login">Login</Link>
         </li>
-        <li>
+        <li className="border border-gray-400 py-1 px-4 rounded-md bg-[#766C7F] text-white">
           <Link to="signup">Sign up</Link>
         </li>
         <li
