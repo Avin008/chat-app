@@ -1,9 +1,16 @@
+import Navbar from "./Navbar";
+
 const Layout = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  return <div>{children}</div>;
+  return (
+    <div className="bg-amber-50 h-screen">
+      <Navbar />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;
