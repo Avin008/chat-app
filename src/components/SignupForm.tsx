@@ -39,7 +39,7 @@ const SignupForm = () => {
         >
           First Name
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="text"
             name="firstName"
             id=""
@@ -54,7 +54,7 @@ const SignupForm = () => {
         >
           Last Name
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 font-medium outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 font-medium outline-1 outline-gray-600"
             type="text"
             name="lastName"
             id=""
@@ -69,7 +69,7 @@ const SignupForm = () => {
         >
           Email
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="email"
             name="email"
             id=""
@@ -84,7 +84,7 @@ const SignupForm = () => {
         >
           Password
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="password"
             name="password"
             id=""

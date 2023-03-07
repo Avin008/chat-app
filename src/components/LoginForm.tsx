@@ -32,7 +32,7 @@ const LoginForm = () => {
         >
           Email
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="text"
             name="email"
             id=""
@@ -47,7 +47,7 @@ const LoginForm = () => {
         >
           Password
           <input
-            className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="password"
             name="password"
             id=""
