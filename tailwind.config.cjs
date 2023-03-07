@@ -10,6 +10,8 @@ module.exports = {
           "Inter",
           ...defaultTheme.fontFamily.sans,
         ],
+        ["comfort"]: "Comfortaa, cursive",
+        ...defaultTheme.fontFamily.sans,
       },
       colors: {
         light: {

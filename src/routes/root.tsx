@@ -3,8 +3,11 @@ const Root = () => {
   return (
     <div className="w-11/12 rounded-md h-80 mx-auto mt-8 grid grid-cols-2">
       <div className="flex px-3 flex-col justify-center">
-        <h1 className="text-2xl font-medium">
-          Meet <span className="text-[#766C7F]">Klara</span>{" "}
+        <h1 className="text-2xl font-comfort font-medium">
+          Meet{" "}
+          <span className="text-[#766C7F] text-3xl">
+            Klara
+          </span>{" "}
           your Personal Chat A.I
         </h1>
         <p>

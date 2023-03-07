@@ -9,13 +9,12 @@ const Navbar = () => {
   return (
     <nav className="h-14 border flex items-center text-[#34312D] border-black px-6 justify-between">
       <div className="flex items-center">
-        <span className="text-3xl">☀️</span>
-        <span className="text-2xl font-semibold">
+        <span className="text-3xl font-extrabold font-comfort">
           <Link to="/">Klara</Link>
         </span>
       </div>
 
-      <ul className="flex gap-5 items-center  ">
+      <ul className="flex gap-5 items-center font-medium">
         <li>
           <Link to="login">Login</Link>
         </li>
