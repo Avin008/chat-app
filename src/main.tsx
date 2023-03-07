@@ -8,6 +8,7 @@ import {
 import { Layout } from "./layout";
 import { LoginForm, SignupForm } from "./components";
 import Root from "./routes/root";
+import Chat from "./routes/chat";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       { path: "signup", element: <SignupForm /> },
       {
         path: "chat/:userID",
-        element: <div>Messages Here</div>,
+        element: <Chat />,
       },
     ],
   },
