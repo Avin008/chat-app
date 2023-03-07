@@ -4,8 +4,8 @@ import { Layout } from "./layout";
 function App() {
   return (
     <Layout>
-      <LoginForm />
-      {/* <SignupForm /> */}
+      {/* <LoginForm /> */}
+      <SignupForm />
     </Layout>
   );
 }

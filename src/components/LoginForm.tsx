@@ -1,4 +1,21 @@
+import { useState } from "react";
+
 const LoginForm = () => {
+  const [userCredentials, setUserCredentials] = useState<{
+    email: string;
+    password: string;
+  }>({ email: "", password: "" });
+
+  const userLoginCredentialsHandler = (
+    e: React.SyntheticEvent<HTMLInputElement>
+  ) => {
+    const { name, value } = e.currentTarget;
+    setUserCredentials((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <form className="mx-auto mt-20 w-1/4 px-2">
       <div className="space-y-2">
@@ -10,9 +27,11 @@ const LoginForm = () => {
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
             type="text"
-            name=""
+            name="email"
             id=""
             placeholder="johndoe@gmail.com"
+            value={userCredentials.email}
+            onChange={userLoginCredentialsHandler}
           />
         </label>
         <label
@@ -22,10 +41,12 @@ const LoginForm = () => {
           Password
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
-            type="text"
-            name=""
+            type="password"
+            name="password"
             id=""
             placeholder="********"
+            value={userCredentials.password}
+            onChange={userLoginCredentialsHandler}
           />
         </label>
         <div className="flex flex-col gap-2 pt-2">

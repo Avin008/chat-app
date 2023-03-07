@@ -1,4 +1,28 @@
+import { useState } from "react";
+
 const SignupForm = () => {
+  const [userCredentials, setUserCredentials] = useState<{
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+  }>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+
+  const userCredentialsHandler = (
+    e: React.SyntheticEvent<HTMLInputElement>
+  ) => {
+    const { name, value } = e.currentTarget;
+    setUserCredentials((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <form className="mx-auto mt-20 w-1/4 px-2">
       <div className="space-y-2">
@@ -10,9 +34,11 @@ const SignupForm = () => {
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
             type="text"
-            name=""
+            name="firstName"
             id=""
             placeholder="johndoe@gmail.com"
+            value={userCredentials.firstName}
+            onChange={userCredentialsHandler}
           />
         </label>
         <label
@@ -23,9 +49,11 @@ const SignupForm = () => {
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 font-medium outline-none"
             type="text"
-            name=""
+            name="lastName"
             id=""
-            placeholder="johndoe@gmail.com"
+            placeholder="Doe"
+            value={userCredentials.lastName}
+            onChange={userCredentialsHandler}
           />
         </label>
         <label
@@ -35,23 +63,27 @@ const SignupForm = () => {
           Email
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
-            type="text"
-            name=""
+            type="email"
+            name="email"
             id=""
             placeholder="johndoe@gmail.com"
+            value={userCredentials.email}
+            onChange={userCredentialsHandler}
           />
         </label>
         <label
           className="flex flex-col gap-1 text-sm font-medium"
-          htmlFor="email"
+          htmlFor="password"
         >
           Password
           <input
             className="rounded-md border border-gray-500 bg-transparent p-2 outline-none"
-            type="text"
-            name=""
+            type="password"
+            name="password"
             id=""
             placeholder="********"
+            value={userCredentials.password}
+            onChange={userCredentialsHandler}
           />
         </label>
         <div className="flex flex-col gap-2 pt-2">
