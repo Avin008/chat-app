@@ -1,10 +1,11 @@
-import { LoginForm } from "./components";
+import { LoginForm, SignupForm } from "./components";
 import { Layout } from "./layout";
 
 function App() {
   return (
     <Layout>
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <SignupForm />
     </Layout>
   );
 }
