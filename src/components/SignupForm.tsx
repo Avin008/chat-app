@@ -23,8 +23,15 @@ const SignupForm = () => {
     }));
   };
 
+  const signupHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className="mx-auto mt-20 w-1/4 px-2">
+    <form
+      className="mx-auto mt-20 w-1/4 px-2"
+      onSubmit={signupHandler}
+    >
       <div className="space-y-2">
         <label
           className="flex flex-col gap-1 text-sm font-medium"
@@ -36,7 +43,7 @@ const SignupForm = () => {
             type="text"
             name="firstName"
             id=""
-            placeholder="johndoe@gmail.com"
+            placeholder="John"
             value={userCredentials.firstName}
             onChange={userCredentialsHandler}
           />
