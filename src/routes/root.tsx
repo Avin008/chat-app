@@ -4,7 +4,8 @@ const Root = () => {
     <div className="w-11/12 rounded-md h-80 mx-auto mt-8 grid grid-cols-2">
       <div className="flex px-3 flex-col justify-center">
         <h1 className="text-2xl font-medium">
-          Meet your Personal Chat A.I
+          Meet <span className="text-[#766C7F]">Klara</span>{" "}
+          your Personal Chat A.I
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing
