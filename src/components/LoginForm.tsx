@@ -3,7 +3,7 @@ const LoginForm = () => {
     <form className="mx-auto mt-20 w-1/4 px-2">
       <div className="space-y-2">
         <label
-          className="flex flex-col gap-1"
+          className="flex flex-col gap-1 text-sm font-medium"
           htmlFor="email"
         >
           Email
@@ -16,7 +16,7 @@ const LoginForm = () => {
           />
         </label>
         <label
-          className="flex flex-col gap-1"
+          className="flex flex-col gap-1 text-sm font-medium"
           htmlFor="email"
         >
           Password
@@ -29,10 +29,10 @@ const LoginForm = () => {
           />
         </label>
         <div className="flex flex-col gap-2 pt-2">
-          <button className="rounded-md border bg-[#766C7F] p-2 text-white">
+          <button className="rounded-md border bg-[#766C7F] p-2 text-sm font-medium text-white">
             Login
           </button>
-          <button className="rounded-md border border-[#766C7F] p-2 text-black">
+          <button className="rounded-md border border-[#766C7F] p-2 text-sm font-medium text-black">
             Login As Guest
           </button>
         </div>
