@@ -32,7 +32,7 @@ const LoginForm = () => {
         >
           Email
           <input
-            className="rounded-sm border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="text"
             name="email"
             id=""
@@ -47,7 +47,7 @@ const LoginForm = () => {
         >
           Password
           <input
-            className="rounded-sm border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
+            className="rounded-md border border-gray-500 bg-transparent p-2 outline-1 outline-gray-600"
             type="password"
             name="password"
             id=""
@@ -57,10 +57,10 @@ const LoginForm = () => {
           />
         </label>
         <div className="flex flex-col gap-2 pt-2">
-          <button className="rounded-sm border bg-[#766C7F] p-2 text-sm font-medium text-white">
+          <button className="rounded-md border bg-[#766C7F] p-2 text-sm font-medium text-white">
             Login
           </button>
-          <button className="rounded-sm border border-[#766C7F] p-2 text-sm font-medium text-black">
+          <button className="rounded-md border border-[#766C7F] p-2 text-sm font-medium text-black">
             Login As Guest
           </button>
         </div>
