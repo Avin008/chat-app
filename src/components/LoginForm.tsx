@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 const LoginForm = () => {
   const [userCredentials, setUserCredentials] = useState<{
@@ -16,8 +17,34 @@ const LoginForm = () => {
     }));
   };
 
+  const loginCall = (url: string) => {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userCredentials),
+    }).then((res) => {
+      if (res.status === 200) {
+        toast.success("user logged in successfully");
+      } else if (res.status === 203) {
+        toast.error("invalid password");
+      } else if (res.status === 404) {
+        toast.error("user not found");
+      }
+    });
+  };
+
+  const loginAsGuest = () => {
+    setUserCredentials({
+      email: "johndoe@gmail.com",
+      password: "qwerty@1234!",
+    });
+  };
+
   const loginHandler = (e: React.FormEvent) => {
     e.preventDefault();
+    loginCall("http://localhost:3000/login");
   };
 
   return (
@@ -60,7 +87,10 @@ const LoginForm = () => {
           <button className="rounded-md border bg-[#766C7F] p-2 text-sm font-medium text-white">
             Login
           </button>
-          <button className="rounded-md border border-[#766C7F] p-2 text-sm font-medium text-black">
+          <button
+            className="rounded-md border border-[#766C7F] p-2 text-sm font-medium text-black"
+            onClick={loginAsGuest}
+          >
             Login As Guest
           </button>
         </div>
